@@ -12,16 +12,4 @@ public class RaycastDetecting : MonoBehaviour
     {
         
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if(Input.GetKey(KeyCode.I))
-        {
-            if(Physics.Raycast(transform.position, transform.forward, out var info, _raycastDistance, _layerMask))
-            {
-                print("Coucou");
-            }
-        }
-    }
 }
