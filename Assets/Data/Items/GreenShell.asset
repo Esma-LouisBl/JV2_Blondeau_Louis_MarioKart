@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1140cd3458b38744da45c38d2e33af6f, type: 3}
-  m_Name: CarapaceVerte
+  m_Name: GreenShell
   m_EditorClassIdentifier: 
   itemSprite: {fileID: 21300000, guid: 6af4ad269b1f1d2448d21035d7b28497, type: 3}
   itemName: 
