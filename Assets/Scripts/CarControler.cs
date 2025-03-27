@@ -53,7 +53,6 @@ public class CarControler : MonoBehaviour
 
         if (Physics.Raycast(transform.position, transform.up * -1, out var info, 1, _layerMask))
         {
-
             Terrain terrainBellow = info.transform.GetComponent<Terrain>();
             if (terrainBellow != null)
             {
