@@ -33,7 +33,7 @@ public class Laps : MonoBehaviour
                 checkpoints ++;
             }
 
-            if (other.CompareTag("Finish") && checkpoints>20)
+            if (other.CompareTag("Finish") && checkpoints>40)
             {
                 laps++;
                 checkpoints = 0;

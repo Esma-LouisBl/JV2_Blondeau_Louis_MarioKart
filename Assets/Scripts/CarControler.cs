@@ -33,6 +33,8 @@ public class CarControler : MonoBehaviour
 
     [SerializeField]
     private CarControler _opponentControler;
+    [SerializeField]
+    private Transform _opponentTransform;
 
     private void Start()
     {
@@ -73,8 +75,10 @@ public class CarControler : MonoBehaviour
     private IEnumerator ThunderCoroutine()
     {
         _opponentControler.speedThunder = 0.5f;
+        _opponentTransform.localScale = _opponentTransform.localScale / 2;
         yield return new WaitForSeconds(8);
         _opponentControler.speedThunder = 1;
+        _opponentTransform.localScale = _opponentTransform.localScale * 2;
     }
 
     void Update()

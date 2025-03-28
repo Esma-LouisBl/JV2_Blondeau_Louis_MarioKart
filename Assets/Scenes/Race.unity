@@ -8594,6 +8594,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1897934574}
     - target: {fileID: 2902579492897431640, guid: e71fd3465e47e704b871dfc376c0ff44, type: 3}
+      propertyPath: _opponentTransform
+      value: 
+      objectReference: {fileID: 1897934572}
+    - target: {fileID: 2902579492897431640, guid: e71fd3465e47e704b871dfc376c0ff44, type: 3}
       propertyPath: _accelerationControl
       value: 273
       objectReference: {fileID: 0}
@@ -31128,6 +31132,10 @@ PrefabInstance:
       propertyPath: _opponentControler
       value: 
       objectReference: {fileID: 1775526902}
+    - target: {fileID: 2902579492897431640, guid: e71fd3465e47e704b871dfc376c0ff44, type: 3}
+      propertyPath: _opponentTransform
+      value: 
+      objectReference: {fileID: 620719863}
     - target: {fileID: 2902579492897431640, guid: e71fd3465e47e704b871dfc376c0ff44, type: 3}
       propertyPath: _accelerationControl
       value: 119
