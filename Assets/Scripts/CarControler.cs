@@ -2,7 +2,7 @@ using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 public class CarControler : MonoBehaviour
 {
@@ -27,7 +27,13 @@ public class CarControler : MonoBehaviour
     [SerializeField]
     private KeyCode _accelerationControl;
 
+    [SerializeField]
+    private Image _inkSplash;
 
+    private void Start()
+    {
+        _inkSplash.enabled = false;
+    }
 
     public void Turbo()
     {
@@ -43,6 +49,19 @@ public class CarControler : MonoBehaviour
         yield return new WaitForSeconds(3);
         _isTurbo = false;
     }
+
+    public void Splash()
+    {
+        StartCoroutine(SplashCoroutine());
+    }
+    private IEnumerator SplashCoroutine()
+    {
+        _inkSplash.enabled = true;
+        yield return new WaitForSeconds(5);
+        _inkSplash.enabled = false;
+    }
+
+
     void Update()
     {
 

@@ -1,7 +1,7 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "ItemChampignon", menuName = "Scriptable Objects/ItemChampignon")]
-public class ItemChampignon : Item
+[CreateAssetMenu(fileName = "ItemMushroom", menuName = "Scriptable Objects/ItemMushroom")]
+public class ItemMushroom : Item
 {
     public override void Activation(PlayerItemManager player)
     {

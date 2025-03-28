@@ -129,6 +129,9 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  _horizontalControl: 
+  _accelerationControl: 0
+  _inkSplash: {fileID: 0}
 --- !u!114 &7142364232239207512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,6 +147,8 @@ MonoBehaviour:
   _player: {fileID: 2029166762904984318}
   _textLaps: {fileID: 0}
   _lastLap: {fileID: 0}
+  laps: 1
+  checkpoints: 0
 --- !u!114 &1114505949038385687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,10 +165,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6348ee6dc470c0548a674a5d75c71266, type: 2}
   - {fileID: 11400000, guid: e480412ac2b81b942bbd1c98e17957cd, type: 2}
   - {fileID: 11400000, guid: 816a41838f1281b4d92468d7a832f33b, type: 2}
+  - {fileID: 11400000, guid: 41bc5e949c49a00409da477f3b17ccec, type: 2}
   _currentItem: {fileID: 0}
   _itemImage: {fileID: 0}
   _numberOfItemUse: 0
   carControler: {fileID: 2902579492897431640}
+  _itemInput: 0
 --- !u!1001 &3438840962082645335
 PrefabInstance:
   m_ObjectHideFlags: 0
