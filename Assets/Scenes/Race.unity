@@ -8136,6 +8136,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2902579492897431640, guid: e71fd3465e47e704b871dfc376c0ff44, type: 3}
+      propertyPath: _horizontalControl
+      value: Horizontal P2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2902579492897431640, guid: e71fd3465e47e704b871dfc376c0ff44, type: 3}
+      propertyPath: _accelerationControl
+      value: 273
+      objectReference: {fileID: 0}
     - target: {fileID: 4786864842229583333, guid: e71fd3465e47e704b871dfc376c0ff44, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.66
@@ -30121,6 +30129,14 @@ PrefabInstance:
     - target: {fileID: 2029166762904984318, guid: e71fd3465e47e704b871dfc376c0ff44, type: 3}
       propertyPath: m_Name
       value: Player 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2902579492897431640, guid: e71fd3465e47e704b871dfc376c0ff44, type: 3}
+      propertyPath: _horizontalControl
+      value: Horizontal P1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2902579492897431640, guid: e71fd3465e47e704b871dfc376c0ff44, type: 3}
+      propertyPath: _accelerationControl
+      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 4786864842229583333, guid: e71fd3465e47e704b871dfc376c0ff44, type: 3}
       propertyPath: m_LocalPosition.x

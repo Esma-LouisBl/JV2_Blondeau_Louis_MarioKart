@@ -1,6 +1,7 @@
 using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
 
 public class CarControler : MonoBehaviour
@@ -19,6 +20,12 @@ public class CarControler : MonoBehaviour
 
     [SerializeField]
     private AnimationCurve _accelerationCurve;
+
+    [SerializeField]
+    private string _horizontalControl;
+
+    [SerializeField]
+    private KeyCode _accelerationControl;
 
 
 
@@ -40,13 +47,13 @@ public class CarControler : MonoBehaviour
     {
 
 
-        _rotationInput = Input.GetAxis("Horizontal");
+        _rotationInput = Input.GetAxis(_horizontalControl);
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(_accelerationControl))
         {
             _isAccelerating = true;
         }
-        if (Input.GetKeyUp(KeyCode.Space))
+        if (Input.GetKeyUp(_accelerationControl))
         {
             _isAccelerating = false;
         }
