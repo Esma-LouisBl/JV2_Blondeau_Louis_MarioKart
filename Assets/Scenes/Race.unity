@@ -8268,9 +8268,21 @@ PrefabInstance:
       propertyPath: _itemImage
       value: 
       objectReference: {fileID: 140365396}
+    - target: {fileID: 1114505949038385687, guid: e71fd3465e47e704b871dfc376c0ff44, type: 3}
+      propertyPath: _itemInput
+      value: 303
+      objectReference: {fileID: 0}
     - target: {fileID: 2029166762904984318, guid: e71fd3465e47e704b871dfc376c0ff44, type: 3}
       propertyPath: m_Name
       value: Player 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2902579492897431640, guid: e71fd3465e47e704b871dfc376c0ff44, type: 3}
+      propertyPath: _speedMaxBasic
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2902579492897431640, guid: e71fd3465e47e704b871dfc376c0ff44, type: 3}
+      propertyPath: _speedMaxTurbo
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 2902579492897431640, guid: e71fd3465e47e704b871dfc376c0ff44, type: 3}
       propertyPath: _horizontalControl
@@ -30469,9 +30481,21 @@ PrefabInstance:
       propertyPath: _itemImage
       value: 
       objectReference: {fileID: 120037137}
+    - target: {fileID: 1114505949038385687, guid: e71fd3465e47e704b871dfc376c0ff44, type: 3}
+      propertyPath: _itemInput
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 2029166762904984318, guid: e71fd3465e47e704b871dfc376c0ff44, type: 3}
       propertyPath: m_Name
       value: Player 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2902579492897431640, guid: e71fd3465e47e704b871dfc376c0ff44, type: 3}
+      propertyPath: _speedMaxBasic
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2902579492897431640, guid: e71fd3465e47e704b871dfc376c0ff44, type: 3}
+      propertyPath: _speedMaxTurbo
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 2902579492897431640, guid: e71fd3465e47e704b871dfc376c0ff44, type: 3}
       propertyPath: _horizontalControl

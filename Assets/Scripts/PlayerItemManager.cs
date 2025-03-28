@@ -18,10 +18,13 @@ public class PlayerItemManager : MonoBehaviour
 
     public CarControler carControler;
 
+    [SerializeField]
+    private KeyCode _itemInput;
+
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.E))
+        if(Input.GetKeyDown(_itemInput))
         {
             UseItem();
         }
