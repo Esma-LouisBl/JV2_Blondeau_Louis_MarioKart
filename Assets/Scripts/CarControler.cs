@@ -50,34 +50,6 @@ public class CarControler : MonoBehaviour
         {
             _isAccelerating = false;
         }
-
-        if (Physics.Raycast(transform.position, transform.up * -1, out var info, 1, _layerMask))
-        {
-            Terrain terrainBellow = info.transform.GetComponent<Terrain>();
-            if (terrainBellow != null)
-            {
-                _terrainSpeedVariator = terrainBellow.speedVariator;
-            }
-            else
-            {
-                _terrainSpeedVariator = 1;
-            }
-        }
-        else
-        {
-            _terrainSpeedVariator = 1;
-        }
-
-        //var xAngle = transform.eulerAngles.x;
-        //if (xAngle>180)
-        //{
-        //    xAngle = Mathf.Clamp(transform.eulerAngles.x, 0, 40);
-        //    xAngle -= 360;
-        //}
-
-        //var yAngle = transform.eulerAngles.y;
-        //var zAngle = 0;
-        //transform.eulerAngles = new Vector3(xAngle,yAngle,zAngle);
     }
 
     private void FixedUpdate()
@@ -106,5 +78,25 @@ public class CarControler : MonoBehaviour
 
         transform.eulerAngles += Vector3.up * _rotationSpeed * Time.deltaTime*_rotationInput;
         _rb.MovePosition(transform.position+transform.forward*_speed*Time.fixedDeltaTime);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Rough"))
+        {
+            _terrainSpeedVariator = 0.5f;
+        }
+        if (collision.gameObject.CompareTag("Road"))
+        {
+            _terrainSpeedVariator = 1;
+        }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Rough"))
+        {
+            _terrainSpeedVariator = 1f;
+        }
     }
 }
