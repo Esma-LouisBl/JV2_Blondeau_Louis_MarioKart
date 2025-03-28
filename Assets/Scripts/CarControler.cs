@@ -8,8 +8,6 @@ public class CarControler : MonoBehaviour
 {
 
     [SerializeField]
-    private LayerMask _layerMask;
-    [SerializeField]
     private Rigidbody _rb;
 
     private float _speed, _accelerationLerpInterpolator, _rotationInput; 
