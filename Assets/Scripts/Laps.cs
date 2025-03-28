@@ -11,17 +11,17 @@ public class Laps : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI _textLaps, _lastLap;
 
-    private int _laps = 1;
-    private int _checkpoints = 0;
+    public int laps = 1;
+    public int checkpoints = 0;
     void Start()
     {
         _lastLap.enabled = false;
-        _textLaps.text = _laps + "/3";
+        _textLaps.text = laps + "/3";
     }
 
     void Update()
     {
-        _textLaps.text = _laps + "/3";
+        _textLaps.text = laps + "/3";
     }
 
     private void OnTriggerEnter(Collider other)
@@ -30,19 +30,19 @@ public class Laps : MonoBehaviour
         {
             if (other.CompareTag("Checkpoint"))
             {
-                _checkpoints ++;
+                checkpoints ++;
             }
 
-            if (other.CompareTag("Finish") && _checkpoints>20)
+            if (other.CompareTag("Finish") && checkpoints>20)
             {
-                _laps++;
-                _checkpoints = 0;
+                laps++;
+                checkpoints = 0;
                 StartCoroutine(LapWink());
-                if (_laps == 3)
+                if (laps == 3)
                 {
                     StartCoroutine(LastLap());
                 }
-                if (_laps == 4)
+                if (laps == 4)
                 {
                     SceneManager.LoadScene("Win");
                 }
