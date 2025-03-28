@@ -8,7 +8,7 @@ public class ItemLaunchable : Item
 
     public override void Activation(PlayerItemManager player)
     {
-        GameObject launchedObject = Instantiate(objectToLaunch, player.transform.position + player.transform.forward * 2, player.transform.rotation);
+        GameObject launchedObject = Instantiate(objectToLaunch, player.transform.position + player.transform.forward * 4, player.transform.rotation);
 
         Rigidbody rb = launchedObject.GetComponent<Rigidbody>();
 

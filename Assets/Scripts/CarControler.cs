@@ -15,6 +15,7 @@ public class CarControler : MonoBehaviour
     private float _speed, _accelerationLerpInterpolator, _rotationInput; 
     [SerializeField]
     private float _speedMaxBasic = 3, _speedMaxTurbo = 10, _accelerationFactor, _rotationSpeed = 0.5f;
+    public float speedThunder = 1;
     private bool _isAccelerating, _isTurbo;
     private float _terrainSpeedVariator;
 
@@ -29,6 +30,9 @@ public class CarControler : MonoBehaviour
 
     [SerializeField]
     private Image _inkSplash;
+
+    [SerializeField]
+    private CarControler _opponentControler;
 
     private void Start()
     {
@@ -61,6 +65,17 @@ public class CarControler : MonoBehaviour
         _inkSplash.enabled = false;
     }
 
+    public void Thunder()
+    {
+        StartCoroutine(ThunderCoroutine());
+    }
+
+    private IEnumerator ThunderCoroutine()
+    {
+        _opponentControler.speedThunder = 0.5f;
+        yield return new WaitForSeconds(8);
+        _opponentControler.speedThunder = 1;
+    }
 
     void Update()
     {
@@ -95,11 +110,11 @@ public class CarControler : MonoBehaviour
 
         if(_isTurbo)
         {
-            _speed = _speedMaxTurbo;
+            _speed = _speedMaxTurbo * speedThunder;
         }
         else
         {
-            _speed = _accelerationCurve.Evaluate(_accelerationLerpInterpolator)*_speedMaxBasic*_terrainSpeedVariator;
+            _speed = _accelerationCurve.Evaluate(_accelerationLerpInterpolator)*_speedMaxBasic*_terrainSpeedVariator*speedThunder;
         }
 
         transform.eulerAngles += Vector3.up * _rotationSpeed * Time.deltaTime*_rotationInput;

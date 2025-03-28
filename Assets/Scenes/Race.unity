@@ -8590,6 +8590,10 @@ PrefabInstance:
       value: Horizontal P2
       objectReference: {fileID: 0}
     - target: {fileID: 2902579492897431640, guid: e71fd3465e47e704b871dfc376c0ff44, type: 3}
+      propertyPath: _opponentControler
+      value: 
+      objectReference: {fileID: 1897934574}
+    - target: {fileID: 2902579492897431640, guid: e71fd3465e47e704b871dfc376c0ff44, type: 3}
       propertyPath: _accelerationControl
       value: 273
       objectReference: {fileID: 0}
@@ -26555,6 +26559,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 961391793}
   m_LocalEulerAnglesHint: {x: 0, y: 0.312, z: 0}
+--- !u!114 &1775526902 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2902579492897431640, guid: e71fd3465e47e704b871dfc376c0ff44, type: 3}
+  m_PrefabInstance: {fileID: 620719862}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a416026c9449e8c4c92e409d1eab43e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1784573461
 GameObject:
   m_ObjectHideFlags: 0
@@ -27798,6 +27813,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4786864842229583333, guid: e71fd3465e47e704b871dfc376c0ff44, type: 3}
   m_PrefabInstance: {fileID: 5547953935642810305}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1897934574 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2902579492897431640, guid: e71fd3465e47e704b871dfc376c0ff44, type: 3}
+  m_PrefabInstance: {fileID: 5547953935642810305}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a416026c9449e8c4c92e409d1eab43e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1905172609
 GameObject:
   m_ObjectHideFlags: 0
@@ -31068,12 +31094,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1114505949038385687, guid: e71fd3465e47e704b871dfc376c0ff44, type: 3}
       propertyPath: _itemList.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1114505949038385687, guid: e71fd3465e47e704b871dfc376c0ff44, type: 3}
       propertyPath: '_itemList.Array.data[3]'
       value: 
       objectReference: {fileID: 11400000, guid: 41bc5e949c49a00409da477f3b17ccec, type: 2}
+    - target: {fileID: 1114505949038385687, guid: e71fd3465e47e704b871dfc376c0ff44, type: 3}
+      propertyPath: '_itemList.Array.data[4]'
+      value: 
+      objectReference: {fileID: 11400000, guid: f6595fcd8a486374db3a55ff321e5694, type: 2}
     - target: {fileID: 2029166762904984318, guid: e71fd3465e47e704b871dfc376c0ff44, type: 3}
       propertyPath: m_Name
       value: Player 1
@@ -31094,6 +31124,10 @@ PrefabInstance:
       propertyPath: _horizontalControl
       value: Horizontal P1
       objectReference: {fileID: 0}
+    - target: {fileID: 2902579492897431640, guid: e71fd3465e47e704b871dfc376c0ff44, type: 3}
+      propertyPath: _opponentControler
+      value: 
+      objectReference: {fileID: 1775526902}
     - target: {fileID: 2902579492897431640, guid: e71fd3465e47e704b871dfc376c0ff44, type: 3}
       propertyPath: _accelerationControl
       value: 119

@@ -105,6 +105,7 @@ MonoBehaviour:
   _speedMaxTurbo: 20
   _accelerationFactor: 0.01
   _rotationSpeed: 75
+  speedThunder: 1
   _accelerationCurve:
     serializedVersion: 2
     m_Curve:
@@ -132,6 +133,7 @@ MonoBehaviour:
   _horizontalControl: 
   _accelerationControl: 0
   _inkSplash: {fileID: 0}
+  _opponentControler: {fileID: 0}
 --- !u!114 &7142364232239207512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,6 +168,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e480412ac2b81b942bbd1c98e17957cd, type: 2}
   - {fileID: 11400000, guid: 816a41838f1281b4d92468d7a832f33b, type: 2}
   - {fileID: 11400000, guid: 41bc5e949c49a00409da477f3b17ccec, type: 2}
+  - {fileID: 11400000, guid: f6595fcd8a486374db3a55ff321e5694, type: 2}
   _currentItem: {fileID: 0}
   _itemImage: {fileID: 0}
   _numberOfItemUse: 0
