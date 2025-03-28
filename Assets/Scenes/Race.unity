@@ -26488,7 +26488,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef21fa71086742f4794a6c11767d15ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _joueur: {fileID: 1897934566}
+  _player: {fileID: 1897934566}
   _textLaps: {fileID: 1792267909}
   _lastLap: {fileID: 1553104439}
 --- !u!114 &1897934569

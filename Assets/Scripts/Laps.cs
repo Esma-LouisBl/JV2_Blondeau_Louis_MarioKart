@@ -2,16 +2,17 @@ using UnityEngine;
 using TMPro;
 using System.Collections;
 using Unity.VisualScripting;
+using UnityEngine.SceneManagement;
 
 public class Laps : MonoBehaviour
 {
     [SerializeField]
-    private GameObject _joueur;
+    private GameObject _player;
     [SerializeField]
     private TextMeshProUGUI _textLaps, _lastLap;
 
     private int _laps = 1;
-    private bool _checked = false;
+    private int _checkpoints = 0;
     void Start()
     {
         _lastLap.enabled = false;
@@ -25,21 +26,25 @@ public class Laps : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (_joueur != null)
+        if (_player != null)
         {
             if (other.CompareTag("Checkpoint"))
             {
-                _checked = true;
+                _checkpoints ++;
             }
 
-            if (other.CompareTag("Finish") && _checked)
+            if (other.CompareTag("Finish") && _checkpoints>20)
             {
                 _laps++;
-                _checked = false;
+                _checkpoints = 0;
                 StartCoroutine(LapWink());
                 if (_laps == 3)
                 {
                     StartCoroutine(LastLap());
+                }
+                if (_laps == 4)
+                {
+                    SceneManager.LoadScene("Win");
                 }
             }
         }
