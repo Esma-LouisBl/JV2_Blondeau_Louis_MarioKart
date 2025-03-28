@@ -90,6 +90,10 @@ public class CarControler : MonoBehaviour
         {
             _terrainSpeedVariator = 1;
         }
+        if (collision.gameObject.CompareTag("PatchTurbo"))
+        {
+            Turbo();
+        }
     }
 
     private void OnCollisionExit(Collision collision)
