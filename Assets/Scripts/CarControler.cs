@@ -14,7 +14,7 @@ public class CarControler : MonoBehaviour
     [SerializeField]
     private float _speedMaxBasic = 3, _speedMaxTurbo = 10, _accelerationFactor, _rotationSpeed = 0.5f;
     public float speedThunder = 1;
-    private bool _isAccelerating, _isTurbo;
+    private bool _isAccelerating, _isTurbo, _isStopped;
     private float _terrainSpeedVariator;
 
     [SerializeField]
@@ -37,6 +37,7 @@ public class CarControler : MonoBehaviour
     private void Start()
     {
         _inkSplash.enabled = false;
+        _isStopped = false;
     }
 
     public void Turbo()
@@ -114,6 +115,10 @@ public class CarControler : MonoBehaviour
         {
             _speed = _speedMaxTurbo * speedThunder;
         }
+        if (_isStopped)
+        {
+            _speed = 0;
+        }
         else
         {
             _speed = _accelerationCurve.Evaluate(_accelerationLerpInterpolator)*_speedMaxBasic*_terrainSpeedVariator*speedThunder;
@@ -142,7 +147,7 @@ public class CarControler : MonoBehaviour
         if (collision.gameObject.CompareTag("Shell"))
         {
             Destroy(collision.gameObject);
-            _speed = 0;
+            StartCoroutine(Stop(2));
         }
     }
 
@@ -152,5 +157,12 @@ public class CarControler : MonoBehaviour
         {
             _terrainSpeedVariator = 1f;
         }
+    }
+
+    public IEnumerator Stop(float time)
+    {
+        _isStopped = true;
+        yield return new WaitForSeconds(time);
+        _isStopped = false;
     }
 }

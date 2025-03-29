@@ -97,9 +97,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a416026c9449e8c4c92e409d1eab43e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _layerMask:
-    serializedVersion: 2
-    m_Bits: 0
   _rb: {fileID: 886975039948064464}
   _speedMaxBasic: 10
   _speedMaxTurbo: 20
@@ -134,6 +131,7 @@ MonoBehaviour:
   _accelerationControl: 0
   _inkSplash: {fileID: 0}
   _opponentControler: {fileID: 0}
+  _opponentTransform: {fileID: 0}
 --- !u!114 &7142364232239207512
 MonoBehaviour:
   m_ObjectHideFlags: 0
