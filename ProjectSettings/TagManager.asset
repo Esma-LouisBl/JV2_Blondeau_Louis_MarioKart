@@ -8,6 +8,7 @@ TagManager:
   - Rough
   - Road
   - PatchTurbo
+  - Shell
   layers:
   - Default
   - TransparentFX

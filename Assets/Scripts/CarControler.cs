@@ -133,9 +133,16 @@ public class CarControler : MonoBehaviour
         {
             _terrainSpeedVariator = 1;
         }
+
         if (collision.gameObject.CompareTag("PatchTurbo"))
         {
             Turbo();
+        }
+
+        if (collision.gameObject.CompareTag("Shell"))
+        {
+            Destroy(collision.gameObject);
+            _speed = 0;
         }
     }
 
